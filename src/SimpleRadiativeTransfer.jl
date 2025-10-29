@@ -4,7 +4,7 @@ export Band, SW, LW, UV
 export sw_create, lw_create, uv_create
 
 export surface_temperature, stefan_bolt
-export τ, down_rad, up_rad, total_rad
+export total_rad
 export params_create
 
 
