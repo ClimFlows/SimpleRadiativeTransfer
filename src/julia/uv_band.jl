@@ -33,6 +33,7 @@ end
 #==============================================================================#
 # Fluxes functions
 
+net_rad(band::UV, p_int, params) = net_rad(band, p_int)
 
 function net_rad(
     band::UV ,

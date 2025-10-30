@@ -76,10 +76,12 @@ include("julia/uv_band.jl")
 #==============================================================================#
 ### Total flux
 
+function total_rad(params, band_lw::LW, bands::Vector{<:Band}, p_int, temp_col)
 
-function total_rad(params, band_sw::SW, band_lw::LW, p_int, temp_col)
-
-    flux = net_rad(band_sw, p_int, params)
+    flux = zeros(length(p_int))
+    for band in bands
+        flux .+= net_rad(band, p_int, params)
+    end
 
     flux_lw, temp_surf = net_rad(band_lw, p_int, temp_col, flux[1], params)
     flux .+= flux_lw
@@ -87,10 +89,9 @@ function total_rad(params, band_sw::SW, band_lw::LW, p_int, temp_col)
     return flux, temp_surf
 end
 
-function total_rad(params, band_sw::SW, band_lw::LW, band_uv::UV, p_int, temp_col)
+function total_rad(params, band_lw::LW, band::Band, p_int, temp_col)
 
-    flux   = net_rad(band_sw, p_int, params)
-    flux .+= net_rad(band_uv, p_int)
+    flux = net_rad(band, p_int, params)
 
     flux_lw, temp_surf = net_rad(band_lw, p_int, temp_col, flux[1], params)
     flux .+= flux_lw
