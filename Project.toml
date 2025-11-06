@@ -1,7 +1,7 @@
 name = "SimpleRadiativeTransfer"
 uuid = "d9671a99-3ca0-4253-904b-b84b72e7f5e1"
 authors = ["Thomas Dubos <thomas.dubos@polytechnique.edu> and contributors"]
-version = "0.1.1"
+version = "0.1.2"
 
 [compat]
 julia = "1.6.7"
