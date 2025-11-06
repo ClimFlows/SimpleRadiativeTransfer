@@ -3,7 +3,7 @@ using Test
 using DelimitedFiles
 using UnicodePlots
 # using Plots
-using ProgressMeter
+# using ProgressMeter
 
 #==============================================================================#
 
@@ -51,7 +51,7 @@ function temp_ev(
     params
     )
 
-    @showprogress for k in 1:n_time+1
+    for k in 1:n_time+1
         tot_rad, temp_surf = total_rad(params, band_lw, bands, p_int, temp_col)
         var_t              = var_temp(params, tot_rad, p_int)
         temp_col += var_t * d_time

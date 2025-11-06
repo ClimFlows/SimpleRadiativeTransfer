@@ -1,0 +1,12 @@
+name: Auto-Tag on Version Change
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  tag:
+    uses: ClimFlows/.github/.github/workflows/auto-tag.yml@main
+    secrets: inherit
