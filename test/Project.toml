@@ -1,0 +1,6 @@
+[deps]
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+ProgressMeter = "92933f4c-e287-5a05-a399-4b506db050ca"
+SimpleRadiativeTransfer = "d9671a99-3ca0-4253-904b-b84b72e7f5e1"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+UnicodePlots = "b8865327-cd53-5732-bb35-84acbb429228"
