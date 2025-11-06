@@ -2,6 +2,7 @@ using SimpleRadiativeTransfer
 using Test
 using DelimitedFiles
 using UnicodePlots
+# using Plots
 using ProgressMeter
 
 #==============================================================================#
@@ -133,7 +134,7 @@ function test_2bands(;
         params
     )
 
-    return temp_col
+    return temp_col, p_layers
 
 end
 
@@ -142,7 +143,7 @@ end
 
 @testset "SimpleRadiativeTransfer.jl" begin
 
-    temp_col_2b = test_2bands()
+    temp_col_2b, p_layers = test_2bands()
     ref_temp_col_2b = readdlm("temp_col_2bands.csv")
     @test temp_col_2b ≈ ref_temp_col_2b atol = 0.01
 
@@ -162,3 +163,5 @@ end
 
     display(p)
 end
+
+# plot([temp_col_2b, temp_col_3b], p_layers; yflip=true)
