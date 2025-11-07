@@ -8,7 +8,7 @@ makedocs(;
     authors="Thomas Dubos <thomas.dubos@polytechnique.edu> and contributors",
     sitename="SimpleRadiativeTransfer.jl",
     format=Documenter.HTML(;
-        canonical="https://dubosipsl.github.io/SimpleRadiativeTransfer.jl",
+        canonical="https://ClimFlows.github.io/SimpleRadiativeTransfer",
         edit_link="main",
         assets=String[],
     ),
@@ -18,6 +18,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/dubosipsl/SimpleRadiativeTransfer.jl",
+    repo="github.com/ClimFlows/SimpleRadiativeTransfer",
     devbranch="main",
 )
