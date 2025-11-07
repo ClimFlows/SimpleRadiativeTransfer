@@ -4,4 +4,4 @@
 [![Build Status](https://github.com/ClimFlows/SimpleRadiativeTransfer/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/ClimFlows/SimpleRadiativeTransfer/actions/workflows/CI.yml?query=branch%3Amain)
 [![Coverage](https://codecov.io/gh/ClimFlows/SimpleRadiativeTransfer/branch/main/graph/badge.svg)](https://codecov.io/gh/ClimFlows/SimpleRadiativeTransfer)
 
-Simplistic radiative transfer calculations for idealized general circulartion experiments.
+Simplistic radiative transfer calculations for idealized general circulation experiments.
