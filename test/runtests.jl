@@ -77,7 +77,7 @@ function test_3bands(;
 
     band_sw  = sw_create(-log(r_sw)/params.p_surf, source=0.9*solarc)
     band_uv  = uv_create(-log(r_uv)/params.p_surf, source=0.1*solarc)
-    band_lw  = lw_create(-log(r_lw)/params.p_surf)
+    band_lw  = LW(-log(r_lw)/params.p_surf)
 
     @info "Testing 3 bands radiative transfer" band_lw, band_sw, band_uv
 
@@ -103,7 +103,6 @@ end
 
 function test_2bands(;
                      n_time       = 4000,
-                     step_sorties = 500,
                      d_time       = 3600,
                      temp_0       = 290,
                      r_sw         = 0.9,
@@ -115,7 +114,7 @@ function test_2bands(;
     params   = params_create()
 
     band_sw  = sw_create(-log(r_sw)/params.p_surf, source=0.9*solarc)
-    band_lw  = lw_create(-log(r_lw)/params.p_surf)
+    band_lw  = LW(-log(r_lw)/params.p_surf)
 
     @info "Testing 2 bands radiative transfer" band_lw, band_sw
 

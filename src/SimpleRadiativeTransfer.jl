@@ -33,7 +33,7 @@ function τ end
 
 function τ(band::Band, p_1, p_2, μ)
     (; α, c_opacity) = band
-    return @. exp( - c_opacity/μ * abs( p_1^(1//α) - p_2^(1//α) )^α  )
+    return @. exp( - c_opacity/μ * abs( p_1^(1/α) - p_2^(1/α) )^α  )
 end
 
 
