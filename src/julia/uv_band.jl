@@ -3,20 +3,20 @@
 #------------------------------------------------------------------------------#
 # Band Types
 
-struct UV <: Band
-    α
-    c_opacity
-    μ
-    source
+struct UV{F<:AbstractFloat} <: Band
+    c_opacity::F
+    α::F
+    μ::F
+    source::F
 end
 
-function uv_create(c_opacity ;
+function UV(c_opacity::F ;
                    α      = 1//2,
                    μ      = 0.7,
                    source = 1340/4
-                   )
+                   ) where F
 
-    return UV(α, c_opacity, μ, source)
+    return UV(c_opacity, F(α), F(μ), F(source))
 end
 
 

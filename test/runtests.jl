@@ -76,7 +76,7 @@ function test_3bands(;
     params   = params_create()
 
     band_sw  = SW(-log(r_sw)/params.p_surf; source=0.9*solarc)
-    band_uv  = uv_create(-log(r_uv)/params.p_surf, source=0.1*solarc)
+    band_uv  = UV(-log(r_uv)/params.p_surf; source=0.1*solarc)
     band_lw  = LW(-log(r_lw)/params.p_surf)
 
     @info "Testing 3 bands radiative transfer" band_lw, band_sw, band_uv
