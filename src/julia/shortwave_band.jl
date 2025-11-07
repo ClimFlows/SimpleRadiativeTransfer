@@ -3,22 +3,21 @@
 #------------------------------------------------------------------------------#
 # Band Types
 
-struct SW <: Band
-    α
-    c_opacity
-    μ
-    source
+struct SW{F<:AbstractFloat} <: Band
+    c_opacity::F
+    α::F
+    μ::F
+    source::F
 end
 
-function sw_create(c_opacity ;
+function SW(c_opacity::F ;
                    α      = 1,
                    μ      = 0.7,
                    source = 1340/4
-                       )
+                       ) where F
 
-    return SW(α, c_opacity, μ, source)
+    return SW(c_opacity, F(α), F(μ), F(source))
 end
-
 
 #------------------------------------------------------------------------------#
 # Transmission function
