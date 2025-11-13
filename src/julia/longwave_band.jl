@@ -3,15 +3,12 @@
 #------------------------------------------------------------------------------#
 # Band Types
 
-struct LW <: Band
-    α
-    c_opacity
+struct LW{F<:AbstractFloat} <: Band
+    c_opacity::F
+    α::F
 end
 
-function lw_create(c_opacity, α = 1//2)
-    return LW(α, c_opacity)
-end
-
+LW(c_opacity::F) where F = LW(c_opacity, F(1//2))
 
 #------------------------------------------------------------------------------#
 # Transmission function
