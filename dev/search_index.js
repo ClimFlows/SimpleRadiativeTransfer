@@ -1,3 +1,3 @@
 var documenterSearchIndex = {"docs":
-[{"location":"#SimpleRadiativeTransfer","page":"Home","title":"SimpleRadiativeTransfer","text":"","category":"section"},{"location":"","page":"Home","title":"Home","text":"Documentation for SimpleRadiativeTransfer.","category":"page"},{"location":"","page":"Home","title":"Home","text":"","category":"page"}]
+[{"title":"SimpleRadiativeTransfer","page":"Home","location":"#SimpleRadiativeTransfer","category":"section","text":""},{"title":"Home","page":"Home","location":"","category":"page","text":"Documentation for SimpleRadiativeTransfer."},{"title":"Home","page":"Home","location":"","category":"page","text":""}]
 }
